@@ -8,7 +8,7 @@ class Header extends Component {
         <section className="title">
           <h1>Rick&Morty</h1>
           <h3>LET'S.GET.SCHWIFTY.</h3>
-          <img className="one" src={'../images/download.png'} alt="" />
+          <img className="one" src={one} alt="" />
         </section>
       </div>
     )

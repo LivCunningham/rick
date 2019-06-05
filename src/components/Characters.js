@@ -2,16 +2,27 @@ import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 
 export default function Characters() {
-  const [chars, setChars] = useState()
+  const [chars, setChars] = useState([])
+
   //this will be my character's list fetch:
-  axios.get(`https://rickandmortyapi.com/api/character/`).then(res => {
-    const results = res.data
-    console.log({ results })
-  })
+  useEffect(() => {
+    axios.get(`https://rickandmortyapi.com/api/character/`).then(resp => {
+      console.log({ resp })
+      setChars(resp.data.results)
+    })
+  }, '')
 
   return (
     <>
-      <div />
+      <ul className="characters-list">
+        {chars.map(characters => {
+          return (
+            <li>
+              <p>{characters.name}</p>
+            </li>
+          )
+        })}
+      </ul>
     </>
   )
 }
