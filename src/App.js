@@ -1,13 +1,22 @@
 import React, { Component } from 'react'
-import Characters from './components/Characters.js'
-import Header from './components/Header.js'
+import Characters from './pages/Characters.js'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import SingleCharacters from './pages/SingleCharacters.js'
 
 class App extends Component {
   render() {
     return (
       <>
-        <Header />
-        <Characters />
+        <Router>
+          <Switch>
+            <Route path="/" exact component={Characters} />
+            <Route
+              path="/SingleCharacters/:personID"
+              component={SingleCharacters}
+            />
+            />
+          </Switch>
+        </Router>
       </>
     )
   }

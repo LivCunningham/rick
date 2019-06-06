@@ -4,6 +4,11 @@
 
 html {
   height: 100%;
+  background-image: url('./images/output (6).svg');
+  background-size: cover;
+  background-repeat: no-repeat center;
+  background-position: fixed;
+  background-attachment: initial;
 }
 
 body {
@@ -15,16 +20,52 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-left: 2rem;
+  font-family: 'Knewave', cursive;
+  font-size: 2rem;
+  color: rgb(248, 47, 255);
 }
 
 .title h3 {
   margin-top: -1rem;
+  font-family: 'Knewave', cursive;
+  color: whitesmoke;
 }
 
 .characters-list {
   list-style: none;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.characters-list li {
+  margin-right: 6rem;
+  margin-top: 2rem;
+}
+
+.one {
+  transform: rotate(180deg);
+  float: inline-end;
+  margin-top: -17rem;
+}
+
+.characters-list p {
+  font-family: 'Knewave', cursive;
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  /* margin-right: 6rem; */
+  color: whitesmoke;
+}
+
+.images {
+  display: flex;
+  /* padding-right: 7rem; */
+  border-radius: 0.75rem;
+  margin-bottom: -0.5rem;
+  box-shadow: 5px 4px 5px 5px rgb(153, 11, 248);
+  border: grey;
 }
